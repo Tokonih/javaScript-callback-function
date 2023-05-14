@@ -57,6 +57,7 @@ function validation(callback) {
     callback(dataArr)
 }
 
-document.getElementById('btn').onclick = () => {
+document.getElementById('btn').onclick = (e) => {
+    e.preventDefault()
     validation(userData)
 }
