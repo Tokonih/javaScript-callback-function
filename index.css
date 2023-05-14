@@ -1,0 +1,14 @@
+.details{
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.details-{
+    background-color: whitesmoke;
+    padding: 10px;
+
+}
