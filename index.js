@@ -14,7 +14,7 @@ function userData(arr) {
         document.getElementById('details').innerHTML += output
 
     });
-    localStorage.setItem('userOutputs',JSON.stringify(userOutputs))
+    localStorage.setItem('userOutputs', JSON.stringify(userOutputs))
     // localStorage.setItem('userOutput', JSON.stringify(output))
     // localStorage.setItem("userOutput", output)
 
@@ -22,7 +22,7 @@ function userData(arr) {
 
 // JSON.parse(localStorage.getItem("userOutput"))
 window.addEventListener('load', () => {
- let userOutputs =  JSON.parse(localStorage.getItem('userOutputs') || '[]')
+    let userOutputs = JSON.parse(localStorage.getItem('userOutputs') || '[]')
     userOutputs.forEach((output) => {
         document.getElementById('details').innerHTML += output
     });
@@ -39,12 +39,12 @@ function validation(callback) {
         if (info[i].value == "" || info[i].value == null) {
             info[i].nextElementSibling.innerHTML = info[i].previousElementSibling.innerHTML + " is required"
         } else { info[i].nextElementSibling == "" }
-
     }
-    if (!firstname.value && !lastname.value && !age.value && !gender.value) {
+
+    if(!firstname.value || !lastname.value || !age.value || !gender.value){
+        // alert('Please fill in the required details');
         return;
     }
-
 
     dataArr = []
     let obj = {
